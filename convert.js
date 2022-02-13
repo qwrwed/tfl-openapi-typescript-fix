@@ -32,3 +32,17 @@ glob.sync( `${inputDir}/**/*.json` ).forEach( function( inputFilePath ) {
     if (err) console.error(err)
   })
 });
+
+// EXCEPTIONS
+// some instances of type StopPoint (aka TfL-11 in StopPoint.json)
+// have been observed to not have one or more ofthe following properties:
+// [
+//   "platformName",
+//   "smsCode",
+//   "accessibilitySummary",
+//   "hubNaptanCode",
+//   "fullName",
+//   "naptanMode",
+//   "url",
+//   "childrenUrls",
+// ]
